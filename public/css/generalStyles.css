@@ -1,0 +1,223 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* === HTML === */
+html, body {
+    height: 100%;
+}
+
+/* === BODY === */
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 10% auto 10%;
+    grid-template-columns: 100%;
+}
+
+body > * {
+    padding: 1em 5em;
+}
+
+/* === HEADER === */
+header {
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+#opcionesUsuario > a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+    border: 2px solid transparent;
+    border-radius: 2em;
+    font-weight: bold;
+    transition-duration: 0.1s;
+}
+
+#opcionesUsuario > a:hover {
+    background-color: rgba(0, 255, 255, 0.159);
+    border-color: black;
+}
+
+/* === SECTION: Planifica tus vacaciones === */
+section#planificaTusVacaciones {
+    padding: 3em 2em;
+}
+
+/* === DESTINOS === */
+#eligeUnDestino {
+    margin-top: 4em;
+}
+
+#destinos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.destino {
+    border: 1px solid black;
+}
+
+.imagenDestino {
+    border-bottom: 1px solid black;
+    line-height: 0;
+}
+
+.imagenDestino img {
+    width: 100%;
+}
+
+.datosDestino {
+    padding: 1em;
+}
+
+.opcionesDestino {
+    margin-top: 1em;
+}
+
+.opcionesDestino > a {
+    padding: 1em;
+    display: block;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(255, 68, 0);
+    border-radius: 1em;
+    transition-duration: 0.3s;
+}
+
+.opcionesDestino > a:hover {
+    background-color: white;
+    color: rgb(255, 68, 0);
+    border-color: rgb(255, 68, 0);
+    box-shadow: 2px 2px 10px rgb(255, 68, 0);
+}
+
+/* === SECTION: Detalles lugar === */
+section#detallesLugar {
+    padding: 1em;
+    margin: 0 5em;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3em;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+.destino {
+    transition-duration: 0.3s;
+}
+
+.destino:hover {
+    box-shadow: 2px 2px 5px rgb(77, 77, 77);
+}
+
+#imagenLugar img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.opciones a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1em;
+    color: white;
+    background-color: rgb(255, 68, 0);
+    display: inline-block;
+    border: 3px solid black;
+    transition-duration: 0.3s;
+}
+
+.opciones a:hover {
+    border-color: rgb(255, 68, 0);
+    color: rgb(255, 68, 0);
+    background-color: white;
+    box-shadow: 2px 2px 10px rgb(255, 68, 0);
+}
+
+/* === FOOTER === */
+footer {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#galeria {
+    position: relative;
+}
+
+#imagenes {
+    overflow: hidden;
+    display: grid;
+    position: relative;
+    width: 100%;
+    left: -10em;
+    top: 0;
+    grid-template-columns: 100% 100% 100%;
+
+}
+
+.imagen {
+    width: 100%;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+/* === DISEÑO PARA MOBIL === */
+@media (max-width: 640px) {
+    /* === BODY === */
+    body > * {
+        padding: 1em;
+    }
+
+    /* === SECTION: Planifica tus vacaciones === */
+    section#planificaTusVacaciones {
+        padding: 2em;
+    }
+
+    /* === SECTION: Detalles lugar === */
+    section#detallesLugar {
+        margin: 0;
+    }
+
+    .principal {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* === Destinos === */
+    #destinos {
+        gap: 5em;
+        grid-template-columns: auto;
+    }
+
+    .destino {
+        flex: 100%;
+    }
+}
