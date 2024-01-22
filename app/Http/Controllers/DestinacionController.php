@@ -13,7 +13,8 @@ class DestinacionController extends Controller
      */
     public function index()
     {
-        //
+        $destinacions = Destinacion::all();
+        return view('destinacions.index', compact('destinacions'));
     }
 
     /**
@@ -35,9 +36,11 @@ class DestinacionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Destinacion $destinacion)
+    public function show($id)
     {
-        //
+        $destinacions = Destinacion::find($id);
+
+        return view('destinacions.show', compact('destinacions'));
     }
 
     /**
